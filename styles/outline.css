@@ -1,0 +1,10 @@
+body {
+    --outlines-shown: 1;
+    --outline-hint-scale: 0;
+    --outline-1-enabled: 0;
+    --outline-2-enabled: 0;
+    --outline-3-enabled: 0;
+    --outline-4-enabled: 0;
+    --outline-5-enabled: 0;
+    --outline-6-enabled: 0;
+  }
