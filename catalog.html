@@ -7,7 +7,6 @@
     <title>HTML Academy: каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="./css/outline.css">
-    <link rel="icon" href="favicon.ico" sizes="32x32">
   </head>
 
   <body>
@@ -117,16 +116,24 @@
             </fieldset>
             <fieldset class="search-filter-group">
               <legend class="filter-title">Стоимость, ₽:</legend>
-              <label class="control-input-cost">
-                <!-- <input class="control-input" type="text" name="from" placeholder="0">
-              <input class="cost-input-min" type="text" name="from" placeholder="0"> -->
-                <input class="cost-input-min" type="number" name="from" placeholder="0">
-              </label>
-              <label class="control-input-cost">
-                <!-- <input class="control-input" type="text" name="to" placeholder="9000"> -->
-                <!-- <input class="cost-input-max" type="text" name="to" placeholder="9000"> -->
-                <input class="cost-input-max" type="number" name="to" placeholder="9000">
-              </label>
+              <div class="control-input-cost">
+                <label class="control-input-cost">
+                  <input class="cost-input-min" type="number" name="from" placeholder="0">
+                </label>
+                <label class="control-input-cost">
+                  <input class="cost-input-max" type="number" name="to" placeholder="9000">
+                </label>
+              </div>
+              <div class="range-scale">
+                <div class="range-bar">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
             </fieldset>
             <div class="filter-wrapp">
               <button class="button-apply" type="submit">Применить</button>
@@ -241,7 +248,7 @@
           </ul>
           <ol class="pagination">
             <li class="pag-item">
-              <a class="pag-link pag-current pag-disabled button" href="catalog.html" aria-current="page">1</a>
+              <a class="pag-link pag-current pag-disabled button" aria-current="page">1</a>
             </li>
             <li class="pag-item">
               <a class="pag-link button" href="">2</a>

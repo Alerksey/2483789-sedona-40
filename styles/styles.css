@@ -25,6 +25,8 @@ html {
   list-style: none;
 }
 
+
+
 body {
 
   min-height: 100%;
@@ -140,7 +142,6 @@ body {
   padding: 8px 50px;
   font-size: 16px;
   line-height: 20px;
-  font-family: "PT Sans";
   font-weight: 700;
   font-family: inherit;
   color: #FFFFFF;
@@ -177,7 +178,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
   padding: 8px 50px;
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -185,14 +186,14 @@ body {
 }
 
 .field {
-  padding: 0px 20px 0px 20px;
+  padding: 0 20px 0 20px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   width: 452px;
   height: 52px;
   background-color: #F2F2F2;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
   border: none;
 }
 
@@ -316,12 +317,13 @@ body {
 
 ul .user-ic-search {
   background: #fff url(../images/icon/search_ic.png) no-repeat 50% 50%;
-  padding: 22px, 12px, 22px, 12px;
+  padding: 22px 12px 22px 12px;
+
 }
 
 ul .user-ic-favorit {
   background: #fff url(../images/icon/heart_ic.png) no-repeat 50% 50%;
-  padding: 22px, 12px, 22px, 12px;
+  padding: 22px 12px 22px 12px;
 }
 
 .favorit-page {
@@ -482,6 +484,7 @@ ul .user-ic-favorit {
   background-position: center;
   background-size: contain;
 }
+
 .qulaity-item-house::before {
   background-image: url("../images/icon/house.svg");
 }
@@ -491,7 +494,7 @@ ul .user-ic-favorit {
 }
 
 .qulaity-item-gift::before {
-background-image: url("../images/icon/gift.svg");
+  background-image: url("../images/icon/gift.svg");
 }
 
 .qulaity-img {
@@ -508,7 +511,7 @@ background-image: url("../images/icon/gift.svg");
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ SERVISE  ДОМ ЕДА ПОДАРОК ++++++++++++++++++++++++++++++++++++++++++++++++++ */
- .services {
+.services {
   text-align: center;
 }
 
@@ -523,7 +526,7 @@ background-image: url("../images/icon/gift.svg");
 .qulaity-item-icon {
   background-repeat: no-repeat;
   background-position: center 81px;
-} 
+}
 
 /* ++++++++++++++++++++++++++++++++ SEARCH +++++++++++++++++++++++++++++++++++++++++++++ */
 .search {
@@ -785,7 +788,7 @@ background-image: url("../images/icon/gift.svg");
   display: inline-block;
   width: 143px;
   height: 48px;
-  padding: 12px, 20px, 12px, 20px;
+  /* padding: 12px 20px 12px 20px; */
   background: #F2F2F2;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -799,7 +802,7 @@ background-image: url("../images/icon/gift.svg");
   display: inline-block;
   width: 143px;
   height: 48px;
-  padding: 12px, 20px, 12px, 20px;
+  /* padding: 12px 20px 12px 20px; */
   background: #F2F2F2;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
@@ -807,6 +810,72 @@ background-image: url("../images/icon/gift.svg");
   font-size: 18px;
   line-height: 24px;
 }
+
+.range-scale {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.range-scale::before {
+  content: "";
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(225, 225, 225, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 226px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+  cursor: pointer;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+  cursor: pointer;
+}
+
+.range-toggle {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++ ot i DO+++++++++++ */
@@ -818,8 +887,14 @@ background-image: url("../images/icon/gift.svg");
   border: 0;
   position: relative;
   display: flex;
+  flex-direction: column;
   gap: 2px;
   margin-bottom: 43px;
+}
+
+.control-input-cost {
+  display: flex;
+  margin-bottom: 42px;
 }
 
 .catalog-filter-title {
@@ -859,7 +934,7 @@ background-image: url("../images/icon/gift.svg");
 
 .control {
   line-height: 23px;
-  /* padding-left: 36px; 
+  /* padding-left: 36px;
  position: relative;
   display: block;  */
 }
@@ -873,8 +948,11 @@ background-image: url("../images/icon/gift.svg");
 
 .wrap-sort {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 50px 0 40px;
   gap: 70px;
+
 }
 
 .result-filter {
@@ -894,9 +972,7 @@ background-image: url("../images/icon/gift.svg");
   color: #333333;
   background: #ffffff url(../images/icon/price_selector.svg) no-repeat;
   background-position: right 20px center;
-  min-width: 292px;
   max-height: 50px;
-  padding: 12px 52px 12px 20px;
   margin-left: auto;
   margin-right: 70px;
   border: 2px solid #E5E5E5;
@@ -928,7 +1004,7 @@ background-image: url("../images/icon/gift.svg");
 }
 
 .card-view-item {
-  padding: 14px, 12px, 14px, 12px;
+  /* padding: 14px 12px 14px 12px */
   gap: 10px;
 }
 
@@ -1058,20 +1134,14 @@ background-image: url("../images/icon/gift.svg");
   line-height: 21px;
   width: 140px;
   height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #F2F2F2;
   text-align: center;
   border-radius: 4px;
   padding-top: 4px;
   text-transform: uppercase;
-}
-
-.star {
-  height: 17px;
-  width: 85px;
-  margin-bottom: 0px;
-  width: 140px;
-  height: 30px;
-
 }
 
 .star::before {
@@ -1105,7 +1175,7 @@ background-image: url("../images/icon/gift.svg");
   min-width: 400px;
   display: flex;
   gap: 8px;
-  padding: 40px 0 60px;
+
 }
 
 .pag-link {
